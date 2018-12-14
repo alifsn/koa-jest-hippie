@@ -1,0 +1,55 @@
+{
+  "name": "koa-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "test": "jest --detectOpenHandles --forceExit --verbose",
+    "test:coverage": "npm test -- --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "hippie": "^0.5.2",
+    "jest": "^23.6.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js}",
+      "!**/node_modules/**",
+      "!**/build/**",
+      "!**/coverage/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "coverageReporters": [
+      "text",
+      "text-summary",
+      "html"
+    ],
+    "testRegex": ".*_test\\.js$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/build/",
+      "/coverage/"
+    ]
+  }
+}
